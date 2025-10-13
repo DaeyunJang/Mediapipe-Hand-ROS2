@@ -12,7 +12,7 @@ This package integrates **MediaPipe Hands** with **ROS 2 (Humble)**.
 It detects hand landmarks from a camera stream, scales them into canonical and world coordinates, builds per-joint coordinate frames, and publishes them into the ROS TF system for downstream robotics applications (e.g., teleoperation, grasp planning).
 
 #### License
-- MIT license
+- Apache 2.0
 ---
 
 ## Detail Logic
