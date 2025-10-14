@@ -154,8 +154,13 @@ class LandmarkToHandPose:
         return T_input2wrist, T_wrist2input, lm_wrist
 
     def _compute_wrist_to_joint_transforms(
-        self, lm_wrist: np.ndarray, joint_idx: int, next_joint_idx: int,
-        is_thumb: bool = False, thumb_deg_offset: float = 75.0
+        self,
+        # label: str,
+        lm_wrist: np.ndarray,
+        joint_idx: int,
+        next_joint_idx: int,
+        is_thumb: bool = False,
+        thumb_deg_offset: float = 75.0
     ) -> np.ndarray:
         """Compute all coordinate systems of each joint.
         It calculated only rotation z and y if the joint is on index~pinky finger.
@@ -222,7 +227,11 @@ class LandmarkToHandPose:
                     nxt = joint_names[min(jpos+1, len(joint_names)-1)]
                     nxt_idx = self._get_landmark_idx(finger, nxt)
                     T_wrist2joint[(finger, jname)] = self._compute_wrist_to_joint_transforms(
-                        lm_wrist, jidx, nxt_idx, is_thumb=(finger=="thumb")
+                        lm_wrist=lm_wrist,
+                        joint_idx=jidx,
+                        next_joint_idx=nxt_idx,
+                        is_thumb=(finger=="thumb"),
+                        thumb_deg_offset=75 if label=='left' else (75+180) if label=='right' else 75
                     )
         self.frames = HandFrames(
             T_input2wrist=T_input2wrist, T_wrist2input=T_wrist2input,
