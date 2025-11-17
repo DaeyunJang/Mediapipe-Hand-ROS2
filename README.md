@@ -87,7 +87,7 @@ source {PATH_OF_YOUR_VIRTUAL_ENV}/bin/activate
 `HandPose` packages is required for run this project.
 ```bash
 cd ~
-git clone https://github.com/DaeyunJang/HandPose.git
+git clone https://github.com/DaeyunJang/Mediapipe-Hand-ROS2.git
 ```
 
 #### Build and source
@@ -96,9 +96,9 @@ git clone https://github.com/DaeyunJang/HandPose.git
   source {PATH_OF_YOUR_VIRTUAL_ENV}/bin/activate
 
   # build dependent package
-  cd ~/HandPose
+  cd ~/Mediapipe-Hand-ROS2
   colcon build
-  ./install/setup.bash # must be enter this line befor build 'Hand-Gripper-ROS2' package.
+  ./install/setup.bash
 ```
 
 #### Launch
