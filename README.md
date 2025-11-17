@@ -79,7 +79,7 @@ source {PATH_OF_YOUR_VIRTUAL_ENV}/bin/activate
 
 #### python modules
 ```bash
-  $ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Execute
@@ -92,18 +92,18 @@ git clone https://github.com/DaeyunJang/Mediapipe-Hand-ROS2.git
 
 #### Build and source
 ```bash
-  # activate python environment
-  source {PATH_OF_YOUR_VIRTUAL_ENV}/bin/activate
+# activate python environment
+source {PATH_OF_YOUR_VIRTUAL_ENV}/bin/activate
 
-  # build dependent package
-  cd ~/Mediapipe-Hand-ROS2
-  colcon build
-  ./install/setup.bash
+# build dependent package
+cd ~/Mediapipe-Hand-ROS2
+colcon build
+./install/setup.bash
 ```
 
 #### Launch
 ```bash
-  ros2 launch handpose_ros handpose_launch.py
+ros2 launch handpose_ros handpose_launch.py
 ```
 
 # ROS configurations
