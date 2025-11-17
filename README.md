@@ -1,4 +1,4 @@
-# Welcome to HandPose-ROS
+# Welcome to Mediapipe-Hand-ROS
 This is Handpose ROS Integration Project.  
 This system reconstructs hand joint coordinate frames from 21 hand landmarks using google `mediapipe`.  
 It includes both a standalone script version and a ROS 2 version.
@@ -13,7 +13,6 @@ It detects hand landmarks from a camera stream, scales them into canonical and w
 
 #### License
 - Apache 2.0
----
 
 ## Detail Logic
 ### ⚠️ Note  
